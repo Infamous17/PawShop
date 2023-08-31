@@ -11,7 +11,6 @@ const app = express();
 dotenv.config();
 connectDb();
 
-app.use(express.static(path.join(__dirname, "../frontend/public")));
 app.use(express.json());
 app.use("/", userRoutes);   //to accept JSON data
 app.use("/", listingRoute);
