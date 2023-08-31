@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Container, Box, Grid, Button, useMediaQuery, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, useToast } from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import ListItems from './ListItems';
 import { SlidersHorizontal } from 'lucide-react';
 import Filter from './Filter';
@@ -13,7 +13,7 @@ const Adopt = () => {
     const { account, setSelectedChat, chats, setChats } = AccountState();
     const [isLargerThan1050] = useMediaQuery("(min-width: 1100px)");
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const btnRef = React.useRef();
+    const btnRef = useRef();
 
     const [allListings, setAllListings] = useState([]);
 
@@ -33,7 +33,6 @@ const Adopt = () => {
                     }
                 };
                 const response = await axios.get("/adopt", config);
-                console.log(response.data);
                 setAllListings(response.data);
             } catch (error) {
                 console.log(error);

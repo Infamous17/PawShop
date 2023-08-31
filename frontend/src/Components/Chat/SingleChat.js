@@ -9,7 +9,7 @@ import io from "socket.io-client";
 import Lottie from "react-lottie";
 import animationData from '../../animation/typing.json';
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://pawshop-fk23.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = () => {
