@@ -42,7 +42,7 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="/adopt" class="nav-link">Adopt A Pet</a>
+                            <a href="/adoption" class="nav-link">Adopt A Pet</a>
                         </li>
                         <li class="nav-item">
                             <a href="/rehome" class="nav-link">ReHome A Pet</a>

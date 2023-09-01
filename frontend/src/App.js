@@ -20,7 +20,7 @@ function App() {
       {!isAuthPage && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/adopt" element={<Adopt />} />
+        <Route path="/adoption" element={<Adopt />} />
         <Route path="/chat" element={<ChatPage />} />
         <Route path="/listings/edit/:id" element={<Edit />} />
         <Route path="/favorites" element={<Favorites />} />
